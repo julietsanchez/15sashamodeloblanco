@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Sasha - Mis 15 Años</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=La+Belle+Aurore&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-KxQ4YbsnUvRJvSLF3MI9z4s35TVv6Qyy8xgRrhRCR+muIEXlHY0XYc7o3Hd3i3PCOZuy3zPZ+v+OxVdXMPe5HA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Cartel solo visible en Desktop -->
+<div class="only-desktop">
+    <div class="desktop-message">
+      <h1>¡Esta invitación solo está disponible en tu celular!</h1><br>
+    </div>
+  </div>
+  
+  <!-- Contenido real solo visible en Mobile -->
+  <div class="only-mobile">
+<div id="welcomeModal" style="position: fixed; z-index: 9999; inset: 0; background-color: #FAF9F6; overflow-y: auto; display: flex; justify-content: center; align-items: center; padding: 2rem; text-align: center;">
+  <div style="width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center; gap: 1.2rem; padding: 2rem 1rem; position: relative; z-index: 1;">
+    <!-- Texto superior -->
+    <span style="font-family: 'Playfair Display', serif; font-size: 1rem; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; letter-spacing: 0.5px; font-weight: 400;">Bienvenidos a la invitación de:</span>
+    
+    <!-- Línea decorativa superior -->
+    <div style="width: 250px; height: 1px; background: linear-gradient(90deg, transparent, #BA9971, transparent); margin: 0.3rem 0;"></div>
+    
+    <!-- "XV" grande -->
+    <h1 style="font-family: 'Open Sans', sans-serif; font-size: 4.5rem; margin: 0; color: #BA9971; font-weight: 400; letter-spacing: 1px; line-height: 1;">XV</h1>
+    
+    <!-- Nombre "Sasha" -->
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 5.5rem; margin: 0.3rem 0; color: #9C784A; font-weight: 600; letter-spacing: 0.5px; line-height: 1.1;">Sasha</h2>
+    
+    <!-- Línea decorativa inferior -->
+    <div style="width: 250px; height: 1px; background: linear-gradient(90deg, transparent, #BA9971, transparent); margin: 0.3rem 0;"></div>
+    
+    <!-- "MIS 15 AÑOS" -->
+    <p style="font-family: 'Open Sans', sans-serif; font-size: 22px; margin: 0.5rem 0; color: #BA9971; font-weight: 600; letter-spacing: 0; line-height: 33px; text-transform: uppercase;">MIS 15 AÑOS</p>
+    
+    <!-- Decoración central (flourish) -->
+    <svg style="width: 140px; height: 35px; margin: 0.3rem 0; opacity: 0.9;" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" style="stop-color:#8B2635;stop-opacity:1" />
+          <stop offset="50%" style="stop-color:#A02030;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#C41E3A;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <path d="M20,30 Q50,10 80,30 T140,30 Q170,10 200,30" stroke="url(#redGradient)" stroke-width="1.5" fill="none" opacity="0.9"/>
+      <path d="M20,30 Q50,50 80,30 T140,30 Q170,50 200,30" stroke="url(#redGradient)" stroke-width="1.5" fill="none" opacity="0.9"/>
+    </svg>
+    
+    <!-- Texto sobre música -->
+    <p style="font-family: 'Playfair Display', serif; font-size: 0.9rem; margin-top: 1.2rem; color: #BA9971; font-weight: 400; letter-spacing: 0.3px;">La música de fondo es parte de la experiencia</p>
+    
+    <!-- Botones -->
+    <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 0; margin-top: 1.8rem; width: 100%; max-width: 500px; flex-wrap: wrap;">
+      <button onclick="startWithMusic()" style="background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); border: none; border-radius: 10px; box-sizing: border-box; color: #F5E6D3; cursor: pointer; display: inline-block; font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 400; height: 41px; line-height: 17px; margin: 0px 5px 15px 5px; min-width: 230px; padding: 12px 15px; text-align: center; transition: all 0.5s ease; width: 230px; box-shadow: 0 4px 15px rgba(139, 38, 53, 0.4);">Ingresar con música</button>
+      <button onclick="startWithoutMusic()" style="background: rgba(139, 38, 53, 0.1); border: 2px solid #A02030; border-radius: 10px; box-sizing: border-box; color: #A02030; cursor: pointer; display: inline-block; font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 400; height: 41px; line-height: 17px; margin: 0px 5px 15px 5px; min-width: 230px; padding: 12px 15px; text-align: center; transition: all 0.5s ease; width: 230px;">Ingresar sin música</button>
+        </div>
+    </div>
+</div>
+    <!-- Sección INICIO -->
+  
+  <!-- Lottie Web Component -->
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+
+  <!-- PRIMERA SECCIÓN (HERO) -->
+  <section class="invitation-hero parallax-section">
+    <!-- Foto con parallax - 60% en mobile -->
+    <div class="parallax-background"></div>
+
+    <!-- Contenido estilo modal - 40% en mobile -->
+    <div class="hero-content-modal">
+      <div style="width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: 3rem 1.5rem; position: relative; z-index: 2;">
+        <!-- Fecha -->
+        <div style="font-family: 'Open Sans', sans-serif; font-size: 0.9rem; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; letter-spacing: 1px; font-weight: 400; margin-bottom: 0.3rem;">15.01.2026</div>
+        
+        <!-- Línea decorativa superior -->
+        <div style="width: 200px; height: 1px; background: linear-gradient(90deg, transparent, #BA9971, transparent); margin: 0.2rem 0;"></div>
+        
+        <!-- "XV" grande -->
+        <h1 style="font-family: 'Open Sans', sans-serif; font-size: 4.5rem; margin: 0; color: #BA9971; font-weight: 700; letter-spacing: 2px; line-height: 1;">XV</h1>
+        
+        <!-- Nombre "Sasha" -->
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 5.5rem; margin: 0.2rem 0; color: #BA9971; font-weight: 600; letter-spacing: 1px; line-height: 1.1;">Sasha</h2>
+        
+        <!-- Línea decorativa inferior -->
+        <div style="width: 200px; height: 1px; background: linear-gradient(90deg, transparent, #BA9971, transparent); margin: 0.2rem 0;"></div>
+        
+        <!-- "MIS 15 AÑOS" -->
+        <p style="font-family: 'Open Sans', sans-serif; font-size: 1rem; margin: 0.3rem 0; color: #BA9971; font-weight: 400; letter-spacing: 1px; text-transform: uppercase;">MIS 15 AÑOS</p>
+        
+        <!-- Corazón rojo latiendo -->
+        <svg style="width: 20px; height: 20px; margin: 0.2rem 0; opacity: 0.9; animation: heartbeat 2s infinite ease-in-out;" viewBox="-25 -25 50 50" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#C41E3A" fill-opacity="1" d=" M-1.1369999647140503,15.593999862670898 C-0.7720000147819519,15.741999626159668 -0.38600000739097595,15.815999984741211 0.0010000000474974513,15.815999984741211 C0.3869999945163727,15.815999984741211 0.7730000019073486,15.741999626159668 1.1369999647140503,15.593999862670898 C1.8550000190734863,15.300999641418457 18.725000381469727,8.284000396728516 18.725000381469727,-4.073999881744385 C18.725000381469727,-10.550000190734863 13.385000228881836,-15.815999984741211 6.820000171661377,-15.815999984741211 C4.349999904632568,-15.815999984741211 1.9789999723434448,-15.067000389099121 0.0010000000474974513,-13.70199966430664 C-1.9780000448226929,-15.067000389099121 -4.348999977111816,-15.815999984741211 -6.817999839782715,-15.815999984741211 C-13.383999824523926,-15.815999984741211 -18.725000381469727,-10.550000190734863 -18.725000381469727,-4.073999881744385 C-18.725000381469727,8.284000396728516 -1.8550000190734863,15.300999641418457 -1.1369999647140503,15.593999862670898z"></path>
+        </svg>
+        
+        <!-- Cita -->
+        <p style="font-family: 'Playfair Display', serif; font-size: 0.95rem; margin: 0.5rem 0; color: #BA9971; font-weight: 400; letter-spacing: 0.3px; line-height: 1.6; text-align: center; max-width: 400px; padding: 0 1rem;">
+          Existen momentos en la vida que<br>
+          imaginamos, soñamos y<br>
+          esperamos. Uno de esos<br>
+          momentos ha llegado...
+        </p>
+        
+        <!-- Scrollwork decorativo grande al final -->
+        <svg style="width: 120px; height: 50px; margin: 0.5rem 0 0 0; opacity: 0.9;" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20,40 Q30,20 50,40 Q70,60 90,40 Q110,20 130,40 Q150,60 170,40 Q180,30 200,40" stroke="#BA9971" stroke-width="1.5" fill="none" opacity="0.8"/>
+          <path d="M20,40 Q30,60 50,40 Q70,20 90,40 Q110,60 130,40 Q150,20 170,40 Q180,50 200,40" stroke="#BA9971" stroke-width="1.5" fill="none" opacity="0.8"/>
+          <circle cx="50" cy="40" r="3" fill="#BA9971" opacity="0.6"/>
+          <circle cx="90" cy="40" r="3" fill="#BA9971" opacity="0.6"/>
+          <circle cx="130" cy="40" r="3" fill="#BA9971" opacity="0.6"/>
+          <circle cx="170" cy="40" r="3" fill="#BA9971" opacity="0.6"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+
+    <audio id="bgMusic" src="assets/audio/musica2.mp3" loop></audio>
+    <button id="muteBtn" onclick="toggleMute()">
+      <svg id="music-icon" viewBox="0 0 24 24" width="24" height="24" fill="#F5E6D3">
+        <path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"></path>
+      </svg>
+    </button>
+
+
+<!-- Sección Cuenta Atrás -->
+<section id="cuenta-atras" style="background-color: #FAF9F6; padding: 3rem 1rem; text-align: center; font-family: 'Fraunces', serif; margin-top: 0; margin-bottom: 30px; position: relative; z-index: 2; box-sizing: border-box;">
+  <div style="position: relative; display: flex; justify-content: center; align-items: center; flex-direction: column; max-width: 600px; margin: 0 auto;">
+    <!-- Separador horizontal superior -->
+    <div style="width: 100%; margin-bottom: 2rem; max-width: 500px;">
+      <svg width="100%" height="8" viewBox="0 0 400 8" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto;">
+        <line x1="0" y1="4" x2="400" y2="4" stroke="#BA9971" stroke-width="1"/>
+        <circle cx="200" cy="4" r="2.5" fill="#BA9971"/>
+        <circle cx="185" cy="4" r="1.5" fill="#BA9971"/>
+        <circle cx="215" cy="4" r="1.5" fill="#BA9971"/>
+        <circle cx="170" cy="4" r="1" fill="#BA9971"/>
+        <circle cx="230" cy="4" r="1" fill="#BA9971"/>
+      </svg>
+    </div>
+    
+    <!-- Título -->
+    <h2 style="font-size: 3rem; font-family: 'Playfair Display', serif; color: #BA9971; margin-bottom: 2rem; font-weight: 600; letter-spacing: 2px;">Faltan</h2>
+    
+    <!-- Contador con separadores verticales -->
+    <div id="timer" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 400px; color: #BA9971; margin-bottom: 2rem;">
+      <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+        <div style="font-size: 2.5rem; font-family: 'Playfair Display', serif; font-weight: 600; color: #BA9971; margin-bottom: 0.5rem;" id="days">00</div>
+        <div style="font-size: 0.9rem; font-family: 'Playfair Display', serif; color: #BA9971;">días</div>
+      </div>
+      <div style="width: 1px; height: 60px; background-color: #BA9971; opacity: 0.5;"></div>
+      <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+        <div style="font-size: 2.5rem; font-family: 'Playfair Display', serif; font-weight: 600; color: #BA9971; margin-bottom: 0.5rem;" id="hours">00</div>
+        <div style="font-size: 0.9rem; font-family: 'Playfair Display', serif; color: #BA9971;">hs</div>
+      </div>
+      <div style="width: 1px; height: 60px; background-color: #BA9971; opacity: 0.5;"></div>
+      <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+        <div style="font-size: 2.5rem; font-family: 'Playfair Display', serif; font-weight: 600; color: #BA9971; margin-bottom: 0.5rem;" id="minutes">00</div>
+        <div style="font-size: 0.9rem; font-family: 'Playfair Display', serif; color: #BA9971;">min</div>
+      </div>
+      <div style="width: 1px; height: 60px; background-color: #BA9971; opacity: 0.5;"></div>
+      <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+        <div style="font-size: 2.5rem; font-family: 'Playfair Display', serif; font-weight: 600; color: #BA9971; margin-bottom: 0.5rem;" id="seconds">00</div>
+        <div style="font-size: 0.9rem; font-family: 'Playfair Display', serif; color: #BA9971;">seg</div>
+      </div>
+    </div>
+    
+    <!-- Corona roja -->
+    <div style="margin-top: 1.5rem; display: flex; justify-content: center; align-items: center;">
+      <i class="fas fa-crown" style="font-size: 50px; color: #C41E3A; animation: heartbeat 2s infinite ease-in-out;"></i>
+    </div>
+    
+    <!-- Separador horizontal inferior -->
+    <div style="width: 100%; margin-top: 2rem; max-width: 500px;">
+      <svg width="100%" height="8" viewBox="0 0 400 8" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto;">
+        <line x1="0" y1="4" x2="400" y2="4" stroke="#BA9971" stroke-width="1"/>
+        <circle cx="200" cy="4" r="2.5" fill="#BA9971"/>
+        <circle cx="185" cy="4" r="1.5" fill="#BA9971"/>
+        <circle cx="215" cy="4" r="1.5" fill="#BA9971"/>
+        <circle cx="170" cy="4" r="1" fill="#BA9971"/>
+        <circle cx="230" cy="4" r="1" fill="#BA9971"/>
+      </svg>
+    </div>
+  </div>
+</section>
+<!-- Sección Ceremonia -->
+<section id="ceremonia" style="background-color: #FAF9F6; padding: 3rem 1rem; text-align: center; font-family: 'Fraunces', serif; margin-top: 0; margin-bottom: 30px; box-sizing: border-box;">
+    <div style="max-width: 480px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center;">
+      <!-- Icono Lottie -->
+      <div style="margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;">
+        <lottie-player src="assets/img/anillos.json" background="transparent" speed="1" style="width: 140px; height: 140px; max-width: 140px; max-height: 140px;" loop autoplay></lottie-player>
+      </div>
+      
+      <!-- Título -->
+      <h2 style="font-size: 3rem; font-family: 'Playfair Display', serif; color: #BA9971; margin-bottom: 1.5rem; font-weight: 600; letter-spacing: 2px;">Misa</h2>
+      
+      <!-- Separador decorativo -->
+      <div style="width: 100%; margin-bottom: 2rem; max-width: 300px;">
+        <svg width="100%" height="16" viewBox="0 0 400 16" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto;">
+          <line x1="0" y1="8" x2="400" y2="8" stroke="#BA9971" stroke-width="1"/>
+          <path d="M200 8 Q195 4 200 2 Q205 4 200 8 Z" fill="#BA9971" opacity="0.9"/>
+        </svg>
+      </div>
+      
+      <!-- Día -->
+      <h3 style="font-size: 1.6rem; font-family: 'Playfair Display', serif; font-weight: 600; color: #BA9971; margin-bottom: 0.5rem;">Día</h3>
+      <p style="font-size: 1rem; font-family: 'Open Sans', sans-serif; color: #BA9971; margin-bottom: 1rem;">Jueves 15 de Enero - 20:00 hs.</p>
+      <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Misa+15+-+Sasha&dates=20260115T210000/20260115T230000&location=Parroquia+Inmaculada+Concepci%C3%B3n,+Av.+Leandro+N.+Alem+738,+Taf%C3%AD+Viejo,+Tucuman&ctz=America/Argentina/Buenos_Aires" 
+         target="_blank" 
+         style="display: inline-block; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); border: none; border-radius: 10px; box-sizing: border-box; color: #F5E6D3; cursor: pointer; font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 400; height: 41px; line-height: 17px; margin: 0px 5px 15px 5px; min-width: 230px; padding: 12px 15px; text-align: center; transition: all 0.5s ease; width: 230px; box-shadow: 0 4px 15px rgba(139, 38, 53, 0.4); text-decoration: none;">
+        AGENDAR
+      </a>
+  
+      <!-- Lugar -->
+      <h3 style="font-size: 1.6rem; font-family: 'Playfair Display', serif; font-weight: 600; color: #BA9971; margin-top: 1.5rem; margin-bottom: 0.5rem;">Lugar</h3>
+      <p style="font-size: 1rem; font-family: 'Open Sans', sans-serif; color: #BA9971; margin-bottom: 1rem;">Parroquia Inmaculada Concepción</p>
+      <button onclick="document.getElementById('confirmarModal').style.display = 'flex';" class="btn-custom">
+        CONFIRMAR ASISTENCIA
+      </button>
+  
+      <!-- Dirección -->
+      <h3 style="font-size: 1.6rem; font-family: 'Playfair Display', serif; font-weight: 600; color: #BA9971; margin-top: 1.5rem; margin-bottom: 0.5rem;">Dirección</h3>
+      <p style="font-size: 1rem; font-family: 'Open Sans', sans-serif; color: #BA9971; margin-bottom: 1rem;">Av. Leandro N. Alem 738 <br> Tafí Viejo</p>
+      <button onclick="openMapModal()" style="background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); border: none; border-radius: 10px; box-sizing: border-box; color: #F5E6D3; cursor: pointer; display: inline-block; font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 400; height: 41px; line-height: 17px; margin: 0px 5px 15px 5px; min-width: 230px; padding: 12px 15px; text-align: center; transition: all 0.5s ease; width: 230px; box-shadow: 0 4px 15px rgba(139, 38, 53, 0.4);">
+        ¿CÓMO LLEGAR?
+      </button>
+    </div>
+</section>
+<!-- Modal Mapa -->
+<div id="mapModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 10000; align-items: center; justify-content: center;">
+  <div style="background: #fff8f0; border-radius: 12px; width: 90%; max-width: 400px; padding: 1.5rem; position: relative; text-align: center; box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.2);">
+    <button onclick="closeMapModal()" style="position: absolute; top: -12px; right: -4px; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); border: none; border-radius: 50%; width: 28px; height: 28px; color: #F5E6D3; font-weight: bold; cursor: pointer; font-family: Arial, sans-serif;">X</button>
+    <h3 style="font-family: 'Playfair Display', serif; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem;">¿Cómo llegar a la Ceremonia?</h3>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.697841515317!2d-65.26661332371487!3d-26.7326100767259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7ead5549aa7700f2!2sParroquia%20Inmaculada%20Concepci%C3%B3n!5e0!3m2!1ses!2$ar!4v1691538999999!5m2!1ses!2$ar" 
+      width="100%" height="250" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <a href="https://www.google.com/maps/place/Parroquia+Inmaculada+Concepci%C3%B3n/data=!4m2!3m1!1s0x0:0x7ead5549aa7700f2?sa=X&ved=1t:2428&ictx=111" 
+       target="_blank" 
+       style="margin-top: 1rem; display: inline-block; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); color: #F5E6D3; font-size: 16px; font-family: 'Open Sans', sans-serif; border: none; border-radius: 10px; width: 200px; padding: 12px 15px; text-align: center; text-decoration: none; height: 41px; line-height: 17px; box-sizing: border-box; box-shadow: 0 4px 15px rgba(139, 38, 53, 0.4); transition: all 0.5s ease;">
+      Abrir GPS
+    </a>
+  </div>
+</div>
+<!-- Sección Fiesta -->
+<section id="Fiesta" style="position: relative; background-color: #FAF9F6; padding: 3rem 1rem; text-align: center; font-family: 'Fraunces', serif; margin-top: 0; margin-bottom: 30px; box-sizing: border-box;">
+    <div style="max-width: 480px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center;">
+      <!-- Icono Lottie -->
+      <div style="margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;">
+        <lottie-player src="assets/img/fiesta.json" background="transparent" speed="1" style="width: 140px; height: 100px; max-width: 100px; max-height: 100px;" loop autoplay></lottie-player>
+      </div>
+      
+      <!-- Título -->
+      <h2 style="font-size: 3rem; font-family: 'Playfair Display', serif; color: #BA9971; margin-bottom: 1.5rem; font-weight: 600; letter-spacing: 2px;">Fiesta</h2>
+      
+      <!-- Separador decorativo -->
+      <div style="width: 100%; margin-bottom: 2rem; max-width: 300px;">
+        <svg width="100%" height="16" viewBox="0 0 400 16" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto;">
+          <line x1="0" y1="8" x2="400" y2="8" stroke="#BA9971" stroke-width="1"/>
+          <path d="M200 8 Q195 4 200 2 Q205 4 200 8 Z" fill="#BA9971" opacity="0.9"/>
+        </svg>
+      </div>
+      
+      <!-- Día -->
+      <h3 style="font-size: 1.6rem; font-family: 'Playfair Display', serif; font-weight: 600; color: #BA9971; margin-bottom: 0.5rem;">Día</h3>
+      <p style="font-size: 1rem; font-family: 'Open Sans', sans-serif; color: #BA9971; margin-bottom: 1rem;">Sábado 17 de Enero - 21:00hs.</p>
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Fiesta+15+de+Sasha&dates=20260117T210000/20260117T230000&location=Sal%C3%B3n+la+zoraida%2C+Guemes+n%C2%B0500%2C+Tafi+Viejo&ctz=America%2FArgentina%2FBuenos_Aires"
+         target="_blank"
+         style="display: inline-block; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); color: #F5E6D3; font-size: 16px; font-family: 'Open Sans', sans-serif; border: none; border-radius: 10px; max-width: 240px; width: 100%; padding: 12px 15px; margin-bottom: 1.2rem; box-shadow: 0 4px 15px rgba(139, 38, 53, 0.4); cursor: pointer; text-align: center; text-decoration: none; height: 41px; line-height: 17px; box-sizing: border-box; transition: all 0.5s ease;">
+        AGENDAR
+      </a>
+  
+      <!-- Lugar -->
+      <h3 style="font-size: 1.6rem; font-family: 'Playfair Display', serif; font-weight: 600; color: #BA9971; margin-top: 1.5rem; margin-bottom: 0.5rem;">Lugar</h3>
+      <p style="font-size: 1rem; font-family: 'Open Sans', sans-serif; color: #BA9971; margin-bottom: 1rem;">Salón "La Zoraida"</p>
+      <button onclick="document.getElementById('confirmarModal').style.display = 'flex';" class="btn-custom">
+        CONFIRMAR ASISTENCIA
+      </button>
+      
+      <!-- Dirección -->
+      <h3 style="font-size: 1.6rem; font-family: 'Playfair Display', serif; font-weight: 600; color: #BA9971; margin-top: 1.5rem; margin-bottom: 0.5rem;">Dirección</h3>
+      <p style="font-size: 1rem; font-family: 'Open Sans', sans-serif; color: #BA9971; margin-bottom: 1rem;"> Guemes n°500, Tafí Viejo </p>
+      <button onclick="document.getElementById('mapModalfiesta').style.display = 'flex';" class="btn-custom">
+        ¿CÓMO LLEGAR?
+      </button>
+    </div>
+    <div id="floralBackground" style="position: absolute; left: -50px; top: 400px; width: 200px; height: 280px; pointer-events: none; z-index: 0; opacity: 0.5; transition: opacity 0.6s ease-in-out; transform: rotate(90deg);">
+      <lottie-player src="assets/img/adornofloral.json" background="transparent" speed="1" style="width: 100%; height: 100%; max-width: 200px; max-height: 280px;" loop autoplay></lottie-player>
+    </div>
+  </section>
+
+<!-- Modal Mapa de fiesta -->
+<div id="mapModalfiesta" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 10000; align-items: center; justify-content: center;">
+  <div style="background: #fff8f0; border-radius: 12px; width: 90%; max-width: 400px; padding: 1.5rem; position: relative; text-align: center; box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.2);">
+    <button onclick="closeMapModal()" style="position: absolute; top: -12px; right: -4px; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); border: none; border-radius: 50%; width: 28px; height: 28px; color: #F5E6D3; font-weight: bold; cursor: pointer; font-family: Arial, sans-serif;">X</button>
+    <h3 style="font-family: 'Playfair Display', serif; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem;">¿Cómo llegar a la Fiesta?</h3>
+    <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.3083568930514!2d-65.2693682!3d-26.7227634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9422671014f16e33%3A0x28911cbfe2907ba!2sGuemes%20500%2C%20Taf%C3%AD%20Viejo%2C%20Tucum%C3%A1n!5e0!3m2!1ses!2sar!4v1723050000000!5m2!1ses!2sar" 
+  width="100%" height="250" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+    <a href="https://maps.app.goo.gl/ZrfRLxSb3oTvEzbN9"
+       target="_blank"
+       style="margin-top: 1rem; display: inline-block; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); color: #F5E6D3; font-size: 16px; font-family: 'Open Sans', sans-serif; border: none; border-radius: 10px; width: 200px; padding: 12px 15px; text-align: center; text-decoration: none; height: 41px; line-height: 17px; box-sizing: border-box; box-shadow: 0 4px 15px rgba(139, 38, 53, 0.4); transition: all 0.5s ease;">
+      Abrir GPS
+    </a>
+  </div>
+</div>
+
+<!-- Modal Confirmar Asistencia -->
+<div id="confirmarModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 10000; align-items: center; justify-content: center;">
+  <div style="background: #fff8f0; border-radius: 12px; width: 85vw; max-width: 400px; height: 80vh; overflow: hidden; padding: 1.5rem; position: relative; text-align: center; box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.2);">
+    <button onclick="closeConfirmarModal()" style="position: absolute; top: 8px; right: 8px; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); border: none; border-radius: 50%; width: 36px; height: 36px; color: #F5E6D3; font-weight: bold; cursor: pointer; font-family: Arial, sans-serif; font-size: 1.2rem;">X</button>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfF5bG8WDzenwhprnm51FMddKTOYqKCt2r2cP2z-_rAU6dadQ/viewform?embedded=true" width="100%" height="100%" style="border-radius: 12px; border: none;" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+  </div>
+</div>
+  </section>
+
+<!-- Sección: Recorrido -->
+<section id="recorrido" style="background-color: #FAF9F6; padding: 3rem 1rem; text-align: center; font-family: 'Fraunces', serif; margin-top: 0; margin-bottom: 30px; box-sizing: border-box; position: relative;">
+  <div style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+    <!-- Separador decorativo superior -->
+    <div style="width: 100%; margin-bottom: 1.5rem; max-width: 300px;">
+      <svg width="100%" height="8" viewBox="0 0 400 8" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto;">
+        <line x1="0" y1="4" x2="400" y2="4" stroke="#BA9971" stroke-width="1"/>
+        <circle cx="200" cy="4" r="2" fill="#BA9971"/>
+      </svg>
+    </div>
+    
+    <!-- Decoración central superior -->
+    <div style="width: 100%; margin-bottom: 1.5rem; max-width: 300px;">
+      <svg width="100%" height="20" viewBox="0 0 400 20" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto;">
+        <line x1="0" y1="10" x2="400" y2="10" stroke="#BA9971" stroke-width="1"/>
+        <path d="M200 10 Q190 5 200 0 Q210 5 200 10 Q190 15 200 20 Q210 15 200 10" fill="none" stroke="#BA9971" stroke-width="1.5"/>
+      </svg>
+    </div>
+    
+    <!-- Título -->
+    <h2 style="font-size: 2.5rem; font-family: 'Playfair Display', serif; color: #BA9971; margin-bottom: 1rem; font-weight: 600; letter-spacing: 1px; line-height: 1.2; text-align: center;">Un recorrido de<br>estos 15 años</h2>
+    
+    <!-- Subtítulo -->
+    <p style="font-size: 1rem; font-family: 'Open Sans', sans-serif; color: #9C784A; margin-bottom: 2rem; line-height: 1.5; text-align: center; max-width: 400px;">Junto a personas que son<br>muy importantes en mi vida</p>
+    
+    <!-- Icono de cámara -->
+    <div style="margin-bottom: 2rem;">
+      <i class="fas fa-camera" style="font-size: 40px; color: #BA9971;"></i>
+    </div>
+    
+    <!-- Carrusel de imágenes -->
+    <div class="carousel-wrapper" style="width: 100%; max-width: 500px; margin: 0 auto 2rem; position: relative; overflow: hidden; border-radius: 12px; background-color: #FFFFFF; height: 350px; border: 1px solid rgba(186, 153, 113, 0.2);">
+      <div id="recorridoCarousel" class="carousel-container" style="display: flex; transition: transform 0.6s ease-in-out;">
+        <!-- Las 10 imágenes del carrusel -->
+        <div class="carousel-slide">
+          <div class="polaroid-card">
+            <img src="assets/img/foto1.jpeg" alt="Foto 1">
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div class="polaroid-card">
+            <img src="assets/img/foto2.jpeg" alt="Foto 2">
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div class="polaroid-card">
+            <img src="assets/img/foto3.jpeg" alt="Foto 3">
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div class="polaroid-card">
+            <img src="assets/img/foto4.jpeg" alt="Foto 4">
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div class="polaroid-card">
+            <img src="assets/img/foto5.jpeg" alt="Foto 5">
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div class="polaroid-card">
+            <img src="assets/img/foto6.jpeg" alt="Foto 6">
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div class="polaroid-card">
+            <img src="assets/img/foto7.jpeg" alt="Foto 7">
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div class="polaroid-card">
+            <img src="assets/img/foto8.jpeg" alt="Foto 8">
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div class="polaroid-card">
+            <img src="assets/img/foto9.jpeg" alt="Foto 9">
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div class="polaroid-card">
+            <img src="assets/img/foto10.jpeg" alt="Foto 10">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Indicadores de navegación -->
+    <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: 2rem;">
+      <span class="carousel-dot active" data-slide="0" style="width: 10px; height: 10px; border-radius: 50%; background-color: #BA9971; cursor: pointer; transition: opacity 0.3s;"></span>
+      <span class="carousel-dot" data-slide="1" style="width: 10px; height: 10px; border-radius: 50%; background-color: #BA9971; cursor: pointer; transition: opacity 0.3s; opacity: 0.5;"></span>
+      <span class="carousel-dot" data-slide="2" style="width: 10px; height: 10px; border-radius: 50%; background-color: #BA9971; cursor: pointer; transition: opacity 0.3s; opacity: 0.5;"></span>
+      <span class="carousel-dot" data-slide="3" style="width: 10px; height: 10px; border-radius: 50%; background-color: #BA9971; cursor: pointer; transition: opacity 0.3s; opacity: 0.5;"></span>
+      <span class="carousel-dot" data-slide="4" style="width: 10px; height: 10px; border-radius: 50%; background-color: #BA9971; cursor: pointer; transition: opacity 0.3s; opacity: 0.5;"></span>
+      <span class="carousel-dot" data-slide="5" style="width: 10px; height: 10px; border-radius: 50%; background-color: #BA9971; cursor: pointer; transition: opacity 0.3s; opacity: 0.5;"></span>
+      <span class="carousel-dot" data-slide="6" style="width: 10px; height: 10px; border-radius: 50%; background-color: #BA9971; cursor: pointer; transition: opacity 0.3s; opacity: 0.5;"></span>
+      <span class="carousel-dot" data-slide="7" style="width: 10px; height: 10px; border-radius: 50%; background-color: #BA9971; cursor: pointer; transition: opacity 0.3s; opacity: 0.5;"></span>
+      <span class="carousel-dot" data-slide="8" style="width: 10px; height: 10px; border-radius: 50%; background-color: #BA9971; cursor: pointer; transition: opacity 0.3s; opacity: 0.5;"></span>
+      <span class="carousel-dot" data-slide="9" style="width: 10px; height: 10px; border-radius: 50%; background-color: #BA9971; cursor: pointer; transition: opacity 0.3s; opacity: 0.5;"></span>
+    </div>
+    
+    <!-- Separador decorativo inferior -->
+    <div style="width: 100%; margin-top: 1rem; max-width: 300px;">
+      <svg width="100%" height="8" viewBox="0 0 400 8" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto;">
+        <line x1="0" y1="4" x2="400" y2="4" stroke="#BA9971" stroke-width="1"/>
+        <circle cx="200" cy="4" r="2" fill="#BA9971"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+
+<!-- Sección: Cards -->
+<section id="cards" class="section-bg" style="padding: 2rem 1rem; text-align: center; margin-top: 0; margin-bottom: 30px; box-sizing: border-box;">
+  <div id="floralBackgroundCards" style="position: absolute; right: -50px; top: 1650px; width: 200px; height: 280px; pointer-events: none; z-index: 0; opacity: 0.5; transition: opacity 0.6s ease-in-out; transform: rotate(90deg) scaleY(-1);">
+    <lottie-player src="assets/img/adornofloral.json" background="transparent" speed="1" style="width: 100%; height: 100%; max-width: 200px; max-height: 280px;" loop autoplay></lottie-player>
+  </div>
+  <div class="container px-3" style="display: flex; flex-direction: column; align-items: center; margin: 0 auto; text-align: center; box-sizing: border-box;">
+    <div class="text-center mb-4">
+      <div style="position: relative; width: 100%; height: 0;">
+        <div style="position: absolute; top: -40px; left: 50%; transform: translateX(-50%); width: 250px; height: 250px; z-index: 1;">
+          <lottie-player src="assets/img/confeti.json" background="transparent" speed="1" style="width: 250px; height: 250px;" loop autoplay></lottie-player>
+        </div>
+      </div>
+      <h2 class="section-title">Fiesta</h2>
+      <p class="section-subtitle">Hagamos juntos una fiesta épica. Aquí algunos detalles a tener en cuenta.</p>
+    </div>
+    <!-- Card Música -->
+    <div class="card-custom card-musica content-item-fiesta"
+      style="background-color: #FFFFFF; border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin: 0 auto 1.2rem auto; overflow-wrap: break-word; word-break: break-word; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; max-width: 340px; border: 1px solid rgba(186, 153, 113, 0.2);">
+      <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; margin-bottom: 5px; font-weight: 600; text-align: center;">Música</h3>
+      <lottie-player src="assets/img/musica.json" background="transparent" speed="1" style="width: 100%; max-width: 150px; height: auto; margin: 20px auto;" loop autoplay></lottie-player>
+      <div class="card-text" style="text-align: center; padding: 0 1rem; word-break: break-word; max-width: 100%; width: 100%;">
+        <p class="card-musica-text"
+           style="font-family: 'Open Sans', sans-serif; color: #BA9971; margin-bottom: 1rem; max-width: 100%; word-break: break-word; margin-left: auto; margin-right: auto; text-align: center;">
+          ¿Cuál es la canción que <br>no debe faltar en la PlayList <br>de la fiesta?
+        </p>
+      </div>
+      <div class="d-flex justify-content-center gap-2" style="width: 100%; flex-wrap: wrap;">
+        <button class="custom-card-btn mx-auto d-block" onclick="document.getElementById('sugerir').style.display = 'flex';">Sugerir canción</button>
+        <button class="custom-card-btn mx-auto d-block" style="text-align: center; max-width: 250px; width: 100%;" onclick="window.open('https://open.spotify.com/playlist/3bTjisE8BRE6OPOHiWA7Pq?si=cc11785549594c37&pt=50c35658086a3dd17b10f577723637b2', '_blank')">Playlist de Spotify</button>
+      </div>
+    </div>
+
+    <!-- Card dresscode -->
+    <div class="card-custom card-dresscode content-item-fiesta d-flex flex-column justify-content-between align-items-center mx-auto"
+      style="background-color: #FFFFFF; border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding: 1.2rem 1rem; text-align: center; max-width: 340px; width: 100%; margin: 0 auto; border: 1px solid rgba(186, 153, 113, 0.2);">
+      <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; margin-bottom: 5px; font-weight: 600;">Dress Code</h3>
+              <lottie-player src="assets/img/Shirt.json" background="transparent" speed="1" style="width: 100%; max-width: 100px; height: auto; margin: 20px auto;" loop autoplay></lottie-player>
+      <p style="font-family: 'Open Sans', sans-serif; color: #9C784A; font-weight: 600;">Formal etiqueta (Evitar usar rojo)</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap card-buttons-group">
+      </div>
+    </div>
+  </div>
+  
+</section>
+</section>
+<!-- Sección Regalos -->
+<section id="regalos" style="background-color: #FAF9F6; padding: 2rem 1rem; position: relative; text-align: center; margin-top: 0; box-sizing: border-box;">
+  <div class="container" style="margin: 0 auto; text-align: center;">
+    <h2 class="text-center mb-3" style="font-family: 'Playfair Display', serif; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; font-weight: 600; font-size: 25.6px;">Regalos</h2>
+    <p class="text-center" style="font-family: 'Playfair Display', serif; color: #BA9971; font-size: 1.2rem;">¡Mi mayor regalo será tu presencias!</p>
+    <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 1.2rem;">
+      <lottie-player src="assets/img/regalo.json" background="transparent" speed="1" style="width: 100%; max-width: 150px; height: auto;" loop autoplay></lottie-player>
+    </div>
+    
+  </div>
+  <!-- Modal Regalos visual style -->
+  <div id="regalosModal" class="modal fade show" tabindex="100" style="display: none;" aria-modal="true" role="dialog">
+    <div class="modal-backdrop fade show" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); z-index: 1040;"></div>
+    <div class="modal-dialog" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1050; display: flex; flex-direction: column; align-items: center;">
+      <div class="modal-content" style="background-color: #fffaf0; border-radius: 24px; padding: 2rem 1.5rem; max-width: 300px; width: 90vw; box-shadow: 0 0 20px rgba(0,0,0,0.2); text-align: center; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <button onclick="closeRegalosModal()" style="position: absolute; top: 12px; right: 12px; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); border: none; color: #F5E6D3; width: 32px; height: 32px; border-radius: 50%; font-weight: bold; cursor: pointer; z-index: 2;">×</button>
+        <div class="d-flex flex-column align-items-center justify-content-center" style="width: 100%; text-align: center;">
+          <h2 style="font-family: 'Playfair Display', serif; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; margin-top: 0; text-align: center; width: 100%;">Transferencias</h2>
+          <p style="font-family: 'Open Sans', sans-serif; color: #9C784A; font-size: 1rem; text-align: center; width: 100%;">CBU: 0720069488000005057968<br>ALIAS: ISMAEL.TEVEZ</p>
+        </div>
+        <button class="btn btn-custom mt-3" id="copyCbuBtn" style="max-width: 200px; width: 100%; margin: 0 auto;">Copiar CBU</button>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- Sección Instagram estilo fondo con imagen -->
+<section id="instagram" style="background-color: #FAF9F6; padding: 4rem 1rem; text-align: center; color: #4A1D18; margin-top: 10; box-sizing: border-box;">
+    <h2 style="font-family: 'Playfair Display', serif; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; font-size: 1.8rem; font-weight: 600; margin-bottom: 10px;">Compartimos este día junto a vos</h2>
+    <p style="font-family: 'Playfair Display', serif; color: #BA9971; font-size: 1.2rem; margin-bottom: 30px;">
+      Compartí tus fotos y videos de este hermoso día
+    </p>
+    <div style="margin-bottom: 20px; display: flex; justify-content: center; align-items: center;">
+      <lottie-player src="assets/img/Instagram.json" background="transparent" speed="1" style="width: 100%; max-width: 150px; height: auto;" loop autoplay></lottie-player>
+    </div>
+          <h3 style="font-size: 1.5rem; font-family: 'Open Sans', sans-serif; color: #9C784A; font-weight: 600; margin-bottom: 20px;">@XVSASHA</h3>
+      <a href="https://www.instagram.com/target="_blank" class="btn-custom btn-instagram" style="max-width: 250px; width: 100%; margin: 0 auto;">VER EN INSTAGRAM</a>
+  </section> 
+  </div>
+
+<!-- Modal Sugerir Canción-->
+<div id="sugerir" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 10000; align-items: center; justify-content: center;">
+    <div style="background: #fff8f0; border-radius: 12px; width: 85vw; max-width: 400px; height: 80vh; overflow: hidden; padding: 1.5rem; position: relative; text-align: center; box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.2);">
+      <button onclick="closeSugerirModal()" style="position: absolute; top: 8px; right: 8px; background-color: #d79330; border: none; border-radius: 50%; width: 36px; height: 36px; color: white; font-weight: bold; cursor: pointer; font-family: Arial, sans-serif; font-size: 1.2rem;" >X</button>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScyR0h_lZF5rs4i1CdZSepTuOW3XEG94-I5_9GXbK1ezQsVNA/viewform?embedded=true" width="100%" height="100%" style="border-radius: 12px; border: none;" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+    </div>
+</div>
+
+</section>
+
+    <!-- Scripts propios -->
+    <script src="js/music.js"></script>
+    <script src="js/modals.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>

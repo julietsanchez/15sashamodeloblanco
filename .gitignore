@@ -1,0 +1,31 @@
+# Sistema operativo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos temporales
+*.log
+*.tmp
+*.temp
+
+# Backups
+*.backup
+*.bak
+*~
+
+# Node modules (si se agrega en el futuro)
+node_modules/
+package-lock.json
+yarn.lock
+
