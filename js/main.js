@@ -137,19 +137,19 @@ function initCopyCBU() {
   }
   
   copyBtn.addEventListener("click", function() {
-    const cbu = "0720069488000005057968";
+    const alias = "S.CAPLA.14";
     
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(cbu).then(function() {
-        alert("CBU copiado al portapapeles");
+      navigator.clipboard.writeText(alias).then(function() {
+        alert("Alias copiado al portapapeles");
       }).catch(function(err) {
         console.error('Error al copiar:', err);
-        alert("Error al copiar el CBU");
+        alert("Error al copiar el alias");
       });
     } else {
       // Fallback para navegadores antiguos
       const textArea = document.createElement("textarea");
-      textArea.value = cbu;
+      textArea.value = alias;
       textArea.style.position = "fixed";
       textArea.style.opacity = "0";
       document.body.appendChild(textArea);
@@ -157,10 +157,11 @@ function initCopyCBU() {
       
       try {
         document.execCommand('copy');
-        alert("CBU copiado al portapapeles");
+        document.body.removeChild(textArea);
+        alert("Alias copiado al portapapeles");
       } catch (err) {
         console.error('Error al copiar:', err);
-        alert("Error al copiar el CBU");
+        alert("Error al copiar el alias");
       }
       
       document.body.removeChild(textArea);

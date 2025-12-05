@@ -8,7 +8,8 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: var(--color-bg-elegant);
+  background: var(--bg-red-abstract);
+  background-attachment: fixed;
 }
 
 .parallax-background {
@@ -44,7 +45,8 @@
   width: 100%;
   min-height: 40vh;
   height: auto;
-  background-color: var(--color-bg-elegant);
+  background: linear-gradient(to top, rgba(107, 26, 40, 0.95) 0%, rgba(139, 38, 53, 0.85) 50%, transparent 100%);
+  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,31 +88,34 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: var(--color-bg-elegant);
+  background: linear-gradient(135deg, rgba(107, 26, 40, 0.98) 0%, rgba(139, 38, 53, 0.95) 50%, rgba(192, 30, 58, 0.98) 100%);
+  backdrop-filter: blur(5px);
 }
 
 #welcomeModal button:first-of-type:hover {
-  background: var(--gradient-red-hover) !important;
-  box-shadow: var(--shadow-button-hover) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-color: rgba(255, 255, 255, 0.9) !important;
+  color: var(--color-primary-red-dark) !important;
   transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4), 0 0 25px rgba(255, 255, 255, 0.2) !important;
 }
 
 #welcomeModal button:first-of-type:active {
-  background: linear-gradient(135deg, #722F37 0%, #8B2635 50%, #A02030 100%) !important;
-  box-shadow: 0 2px 10px rgba(139, 38, 53, 0.4) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.95) !important;
   transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.15) !important;
 }
 
 #welcomeModal button:last-of-type:hover {
-  background: rgba(139, 38, 53, 0.2) !important;
-  border-color: var(--color-primary-red-dark) !important;
-  color: #D4AF37 !important;
+  background: var(--gradient-red-hover) !important;
+  box-shadow: var(--shadow-button-hover), 0 0 25px rgba(255, 255, 255, 0.2) !important;
   transform: translateY(-1px);
 }
 
 #welcomeModal button:last-of-type:active {
-  background: rgba(139, 38, 53, 0.15) !important;
-  border-color: var(--color-primary-red) !important;
+  background: linear-gradient(135deg, #722F37 0%, #8B2635 50%, #A02030 100%) !important;
+  box-shadow: 0 2px 10px rgba(139, 38, 53, 0.4), 0 0 15px rgba(255, 255, 255, 0.15) !important;
   transform: translateY(0);
 }
 
@@ -129,7 +134,7 @@
   font-size: 16px;
   font-weight: 400;
   text-align: center;
-  box-shadow: var(--shadow-button);
+  box-shadow: var(--shadow-button), 0 0 20px rgba(255, 255, 255, 0.15);
   transition: all 0.5s ease;
   cursor: pointer;
   height: 41px;
@@ -146,7 +151,7 @@
 .custom-card-btn:focus,
 .custom-btn:focus {
   background: var(--gradient-red-hover);
-  box-shadow: var(--shadow-button-hover);
+  box-shadow: var(--shadow-button-hover), 0 0 25px rgba(255, 255, 255, 0.2);
   transform: translateY(-1px);
   color: var(--color-text-light);
   text-decoration: none;
@@ -175,19 +180,16 @@
    ============================================ */
 .card-custom {
   border-radius: 24px !important;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1), 0 1.5px 6px rgba(0,0,0,0.08) !important;
-  background: var(--color-bg-card);
-  border: 1px solid rgba(186, 153, 113, 0.2);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3), 0 4px 15px rgba(0,0,0,0.2) !important;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .section-title {
   font-family: var(--font-serif);
   font-size: 2rem;
-  background: var(--gradient-red);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
+  color: var(--color-gold);
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 0.7rem;
@@ -284,13 +286,14 @@
   margin: 0 auto;
   top: 20%;
   border-radius: 12px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(15px);
   padding: 1rem;
   position: relative;
   z-index: 1050;
   text-align: center;
-  box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.2);
-  border: none;
+  box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .modal-close {
@@ -309,6 +312,7 @@
   line-height: 1;
   font-size: 1.2rem;
   z-index: 1060;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
 }
 
 .modal-fade {
@@ -326,8 +330,10 @@
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  background-color: #FFFFFF;
-  border: 1px solid rgba(186, 153, 113, 0.2);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
   height: 350px;
 }
 
@@ -335,14 +341,12 @@
   display: flex;
   transition: transform 0.6s ease-in-out;
   will-change: transform;
-  width: 1000%;
   height: 100%;
+  position: relative;
 }
 
 #recorrido .carousel-slide {
-  flex: 0 0 10%;
-  min-width: 10%;
-  width: 10%;
+  flex-shrink: 0;
   padding: 15px;
   box-sizing: border-box;
   display: flex;
@@ -353,12 +357,12 @@
 
 #recorrido .polaroid-card {
   width: 100%;
-  max-width: 300px;
-  height: 320px;
-  background-color: var(--color-text-light);
-  padding: 12px 12px 40px 12px;
-  box-shadow: var(--shadow-button);
-  border-radius: 4px;
+  max-width: 100%;
+  height: 100%;
+  background-color: transparent;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -366,15 +370,61 @@
 }
 
 #recorrido .polaroid-card img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
-  border-radius: 2px;
+  border-radius: 0;
   display: block;
 }
 
 #recorrido .carousel-slide img:hover {
   transform: scale(1.02);
+}
+
+/* Flechas de navegación del carrusel */
+#recorrido .carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(139, 38, 53, 0.9);
+  border: 2px solid #8B2635;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(139, 38, 53, 0.4), 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+#recorrido .carousel-arrow:hover {
+  background: rgba(192, 30, 58, 0.95);
+  border-color: #C41E3A;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(139, 38, 53, 0.6), 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+#recorrido .carousel-arrow:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+#recorrido .carousel-arrow-prev {
+  left: 10px;
+}
+
+#recorrido .carousel-arrow-next {
+  right: 10px;
+}
+
+#recorrido .carousel-arrow svg {
+  width: 20px;
+  height: 20px;
 }
 
 #recorrido .carousel-dot {
@@ -398,7 +448,20 @@
    SECCIONES ESPECÍFICAS
    ============================================ */
 .section-bg {
-  background-color: var(--color-bg-elegant);
+  background: transparent;
+  position: relative;
+}
+
+.section-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-red-abstract);
+  background-attachment: fixed;
+  z-index: -1;
 }
 
 /* Desktop/Mobile visibility */
@@ -420,8 +483,9 @@
   align-items: center;
   padding: 2rem;
   text-align: center;
-  background-color: var(--color-bg-modal);
-  color: #333;
+  background: var(--bg-red-abstract);
+  background-attachment: fixed;
+  color: #F5E6D3;
   font-family: var(--font-fraunces);
   font-size: 1.8rem;
 }
@@ -536,6 +600,28 @@
 }
 
 #welcomeModal .welcome-btn-primary {
+  background: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: var(--color-primary-red);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 400;
+  height: 41px;
+  line-height: 17px;
+  margin: 0px 5px 15px 5px;
+  min-width: 230px;
+  padding: 12px 15px;
+  text-align: center;
+  transition: all 0.5s ease;
+  width: 230px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+#welcomeModal .welcome-btn-secondary {
   background: var(--gradient-red);
   border: none;
   border-radius: 10px;
@@ -554,28 +640,7 @@
   text-align: center;
   transition: all 0.5s ease;
   width: 230px;
-  box-shadow: var(--shadow-button);
-}
-
-#welcomeModal .welcome-btn-secondary {
-  background: rgba(139, 38, 53, 0.1);
-  border: 2px solid var(--color-primary-red-light);
-  border-radius: 10px;
-  box-sizing: border-box;
-  color: var(--color-primary-red-light);
-  cursor: pointer;
-  display: inline-block;
-  font-family: var(--font-sans);
-  font-size: 16px;
-  font-weight: 400;
-  height: 41px;
-  line-height: 17px;
-  margin: 0px 5px 15px 5px;
-  min-width: 230px;
-  padding: 12px 15px;
-  text-align: center;
-  transition: all 0.5s ease;
-  width: 230px;
+  box-shadow: var(--shadow-button), 0 0 20px rgba(255, 255, 255, 0.15);
 }
 
 /* Hero content modal */
@@ -711,7 +776,20 @@
 
 /* Cuenta atrás */
 #cuenta-atras {
-  background-color: var(--color-bg-elegant);
+  background: transparent;
+  position: relative;
+}
+
+#cuenta-atras::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-red-abstract);
+  background-attachment: fixed;
+  z-index: -1;
   padding: 3rem 1rem;
   text-align: center;
   font-family: var(--font-fraunces);
@@ -791,7 +869,20 @@
 
 /* Recorrido */
 #recorrido {
-  background-color: var(--color-bg-elegant);
+  background: transparent;
+  position: relative;
+}
+
+#recorrido::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-red-abstract);
+  background-attachment: fixed;
+  z-index: -1;
   padding: 3rem 1rem;
   text-align: center;
   font-family: var(--font-fraunces);
@@ -871,14 +962,16 @@
 .modal-map-content,
 .modal-confirmar-content,
 .modal-sugerir-content {
-  background: var(--color-bg-modal);
+  background: rgba(255, 248, 240, 0.98);
+  backdrop-filter: blur(15px);
   border-radius: 12px;
   width: 90%;
   max-width: 400px;
   padding: 1.5rem;
   position: relative;
   text-align: center;
-  box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .modal-confirmar-content,
@@ -902,6 +995,7 @@
   font-weight: bold;
   cursor: pointer;
   font-family: Arial, sans-serif;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
 }
 
 .modal-close-btn-large {

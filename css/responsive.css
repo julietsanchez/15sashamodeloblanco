@@ -438,7 +438,17 @@
   #recorrido .polaroid-card {
     max-width: 250px;
     height: 270px;
-    padding: 10px 10px 35px 10px;
+    padding: 0;
+  }
+  
+  #recorrido .carousel-arrow {
+    width: 35px;
+    height: 35px;
+  }
+  
+  #recorrido .carousel-arrow svg {
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -462,12 +472,30 @@
   #recorrido .polaroid-card {
     max-width: 200px;
     height: 220px;
-    padding: 8px 8px 30px 8px;
+    padding: 0;
   }
   
   #recorrido .carousel-dot {
     width: 8px;
     height: 8px;
+  }
+  
+  #recorrido .carousel-arrow {
+    width: 32px;
+    height: 32px;
+  }
+  
+  #recorrido .carousel-arrow-prev {
+    left: 5px;
+  }
+  
+  #recorrido .carousel-arrow-next {
+    right: 5px;
+  }
+  
+  #recorrido .carousel-arrow svg {
+    width: 16px;
+    height: 16px;
   }
 }
 

@@ -9,14 +9,21 @@
   --color-gold: #BA9971;
   --color-gold-light: #9C784A;
   --color-bg-dark: #FAF9F6;
-  --color-bg-card: #FFFFFF;
+  --color-bg-card: rgba(255, 255, 255, 0.95);
   --color-text-light: #F5E6D3;
-  --color-bg-modal: #fff8f0;
+  --color-bg-modal: rgba(255, 248, 240, 0.98);
   --color-bg-elegant: #FAF9F6;
   
   /* Gradientes */
   --gradient-red: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%);
   --gradient-red-hover: linear-gradient(135deg, #A02030 0%, #C41E3A 50%, #DC143C 100%);
+  
+  /* Fondo abstracto rojo moderno */
+  --bg-red-abstract: 
+    radial-gradient(circle at 20% 50%, rgba(139, 38, 53, 0.8) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(192, 30, 58, 0.6) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(160, 32, 48, 0.7) 0%, transparent 50%),
+    linear-gradient(135deg, #6B1A28 0%, #8B2635 25%, #A02030 50%, #C41E3A 75%, #8B2635 100%);
   
   /* Fuentes */
   --font-serif: 'Playfair Display', serif;
@@ -51,7 +58,9 @@ html, body {
 body {
   padding-left: 0;
   padding-right: 0;
-  background-color: var(--color-bg-dark);
+  background: var(--bg-red-abstract);
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 *, *:before, *:after {
