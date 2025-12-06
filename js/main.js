@@ -191,3 +191,23 @@ window.startWithMusic = startWithMusic;
 window.startWithoutMusic = startWithoutMusic;
 window.scrollToInicio = scrollToInicio;
 
+/**
+ * Abre Instagram en la app si está disponible, sino abre en el navegador
+ */
+function openInstagramApp() {
+  const username = 'sashacapla.382';
+  const appUrl = `instagram://user?username=${username}`;
+  const webUrl = `https://www.instagram.com/${username}/`;
+  
+  // Intentar abrir la app
+  window.location.href = appUrl;
+  
+  // Si después de 500ms no se abrió la app, abrir en el navegador
+  setTimeout(function() {
+    window.location.href = webUrl;
+  }, 500);
+}
+
+// Exportar función para uso global
+window.openInstagramApp = openInstagramApp;
+
