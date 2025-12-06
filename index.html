@@ -135,10 +135,10 @@
 
 
 <!-- Sección Cuenta Atrás -->
-<section id="cuenta-atras" style="background: transparent; padding: 3rem 1rem; text-align: center; font-family: 'Fraunces', serif; margin-top: 0; margin-bottom: 1.5rem; position: relative; z-index: 2; box-sizing: border-box;">
-  <div style="position: relative; display: flex; justify-content: center; align-items: center; flex-direction: column; max-width: 600px; margin: 0 auto;">
+<section id="cuenta-atras" style="background: transparent; padding: 3rem 1rem; text-align: center; font-family: 'Fraunces', serif; margin-top: 0; margin-bottom: 1.5rem; position: relative; z-index: 3; box-sizing: border-box; overflow: visible;">
+  <div style="position: relative; display: flex; justify-content: center; align-items: center; flex-direction: column; max-width: 600px; margin: 0 auto; overflow: visible; z-index: 3;">
     <!-- Separador horizontal superior -->
-    <div style="width: 100%; margin-bottom: 1rem; max-width: 500px;">
+    <div style="width: 100%; margin-bottom: 2rem; max-width: 500px; position: relative; z-index: 1;">
       <svg width="100%" height="8" viewBox="0 0 400 8" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto;">
         <line x1="0" y1="4" x2="400" y2="4" stroke="#BA9971" stroke-width="1"/>
         <circle cx="200" cy="4" r="2.5" fill="#BA9971"/>
@@ -150,7 +150,7 @@
     </div>
     
     <!-- Título -->
-    <h2 style="font-size: 3rem; font-family: 'Playfair Display', serif; color: #BA9971; margin-bottom: 1rem; font-weight: 600; letter-spacing: 2px;">Faltan</h2>
+    <h2 style="font-size: 3rem; font-family: 'Playfair Display', serif; color: #BA9971; margin-bottom: 1rem; font-weight: 600; letter-spacing: 2px; padding: 0 1.5rem; overflow: visible; white-space: nowrap; width: auto; display: inline-block; position: relative; z-index: 3;">Faltan</h2>
     
     <!-- Contador con separadores verticales -->
     <div id="timer" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 400px; color: #BA9971; margin-bottom: 1rem;">
@@ -174,11 +174,7 @@
         <div style="font-size: 0.9rem; font-family: 'Playfair Display', serif; color: #BA9971;">seg</div>
       </div>
     </div>
-    
-    <!-- Corona roja -->
-    <div style="margin-top: 1rem; display: flex; justify-content: center; align-items: center;">
-      <i class="fas fa-crown" style="font-size: 50px; color: #C41E3A; animation: heartbeat 2s infinite ease-in-out;"></i>
-    </div>
+
     
     <!-- Separador horizontal inferior -->
     <div style="width: 100%; margin-top: 1.5rem; max-width: 500px;">
@@ -319,7 +315,7 @@
 <div id="confirmarModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 10000; align-items: center; justify-content: center;">
   <div style="background: #fff8f0; border-radius: 12px; width: 85vw; max-width: 400px; height: 80vh; overflow: hidden; padding: 1.5rem; position: relative; text-align: center; box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.2);">
     <button onclick="closeConfirmarModal()" style="position: absolute; top: 8px; right: 8px; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); border: none; border-radius: 50%; width: 36px; height: 36px; color: #F5E6D3; font-weight: bold; cursor: pointer; font-family: Arial, sans-serif; font-size: 1.2rem; box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);">X</button>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfF5bG8WDzenwhprnm51FMddKTOYqKCt2r2cP2z-_rAU6dadQ/viewform?embedded=true" width="100%" height="100%" style="border-radius: 12px; border: none;" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfF5bG8WDzenwhprnm51FMddKTOYqKCt2r2cP2z-_rAU6dadQ/viewform?embedded=true&usp=pp_url" width="100%" height="100%" style="border-radius: 12px; border: none;" frameborder="0" marginheight="0" marginwidth="0" referrerpolicy="no-referrer-when-downgrade" sandbox="allow-scripts allow-same-origin allow-forms allow-popups">Cargando…</iframe>
   </div>
 </div>
   </section>
@@ -539,7 +535,7 @@
 
 
 <!-- Sección: Cards -->
-<section id="cards" class="section-bg" style="padding: 4rem 1rem; text-align: center; margin-top: 0; margin-bottom: 2rem; box-sizing: border-box;">
+<section id="cards" class="section-bg" style="padding: 3rem 1rem; text-align: center; margin-top: 0; margin-bottom: 1.5rem; box-sizing: border-box;">
   <div id="floralBackgroundCards" style="position: absolute; right: -50px; top: 1650px; width: 200px; height: 280px; pointer-events: none; z-index: 0; opacity: 0.5; transition: opacity 0.6s ease-in-out; transform: rotate(90deg) scaleY(-1);">
     <lottie-player src="assets/img/adornofloral.json" background="transparent" speed="1" style="width: 100%; height: 100%; max-width: 200px; max-height: 280px;" loop autoplay></lottie-player>
   </div>
@@ -555,7 +551,7 @@
     </div>
     <!-- Card Música -->
     <div class="card-custom card-musica content-item-fiesta"
-      style="background-color: rgba(255, 255, 255, 0.95); border-radius: 24px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); margin: 0 auto 1.5rem auto; overflow-wrap: break-word; word-break: break-word; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; max-width: 340px; border: 1px solid rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px);">
+      style="background-color: rgba(255, 255, 255, 0.95); border-radius: 24px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); margin: 0 auto 2.3rem auto; overflow-wrap: break-word; word-break: break-word; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; max-width: 340px; border: 1px solid rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px);">
       <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; margin-bottom: 5px; font-weight: 600; text-align: center;">Música</h3>
       <lottie-player src="assets/img/musica.json" background="transparent" speed="1" style="width: 100%; max-width: 150px; height: auto; margin: 20px auto;" loop autoplay></lottie-player>
       <div class="card-text" style="text-align: center; padding: 0 1rem; word-break: break-word; max-width: 100%; width: 100%;">
@@ -572,7 +568,7 @@
 
     <!-- Card dresscode -->
     <div class="card-custom card-dresscode content-item-fiesta d-flex flex-column justify-content-between align-items-center mx-auto"
-      style="background-color: rgba(255, 255, 255, 0.95); border-radius: 24px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); padding: 1.2rem 1rem; text-align: center; max-width: 340px; width: 100%; margin: 0 auto 1.5rem auto; border: 1px solid rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px);">
+      style="background-color: rgba(255, 255, 255, 0.95); border-radius: 24px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); padding: 1.2rem 1rem; text-align: center; max-width: 340px; width: 100%; margin: 0 auto 2.3rem auto; border: 1px solid rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px);">
       <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; margin-bottom: 5px; font-weight: 600;">Dress Code</h3>
               <lottie-player src="assets/img/Shirt.json" background="transparent" speed="1" style="width: 100%; max-width: 100px; height: auto; margin: 20px auto;" loop autoplay></lottie-player>
       <p style="font-family: 'Open Sans', sans-serif; color: #9C784A; font-weight: 600; text-align: center; margin-bottom: 0.5rem;">Formal elegante</p>
@@ -580,22 +576,17 @@
       <div class="d-flex justify-content-center gap-3 flex-wrap card-buttons-group">
       </div>
     </div>
-  </div> 
-</section>
 
-<!-- Sección Regalos -->
-<section id="regalos" style="background: transparent; padding: 3rem 1rem; text-align: center; margin-top: 0; margin-bottom: 1.5rem; box-sizing: border-box;">
-  <div class="container" style="margin: 0 auto; text-align: center; max-width: 600px;">
     <!-- Card Regalos -->
     <div class="card-custom card-regalos content-item-fiesta"
-      style="background-color: rgba(255, 255, 255, 0.95); border-radius: 24px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); margin: 0 auto 0 auto; overflow-wrap: break-word; word-break: break-word; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; max-width: 340px; border: 1px solid rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px);">
+      style="background-color: rgba(255, 255, 255, 0.95); border-radius: 24px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); margin: 0 auto 2.3rem auto; overflow-wrap: break-word; word-break: break-word; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; max-width: 340px; border: 1px solid rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px);">
       <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; margin-bottom: 5px; font-weight: 600; text-align: center;">Regalos</h3>
       <lottie-player src="assets/img/regalo.json" background="transparent" speed="1" style="width: 100%; max-width: 150px; height: auto; margin: 20px auto;" loop autoplay></lottie-player>
       <div class="card-text" style="text-align: center; padding: 0 1rem; word-break: break-word; max-width: 100%; width: 100%;">
         <p style="font-family: 'Open Sans', sans-serif; color: #9C784A; font-weight: 600; margin-bottom: 0.5rem; max-width: 100%; word-break: break-word; margin-left: auto; margin-right: auto; text-align: center;">
           ¡Mi mayor regalo será tu presencia!
         </p>
-        <p style="font-family: 'Open Sans', sans-serif; color: #BA9971; font-weight: 400; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem; max-width: 100%; word-break: break-word; margin-left: auto; margin-right: auto; text-align: center;">
+        <p style="font-family: 'Open Sans', sans-serif; color: #909090; font-weight: 200; font-size: 0.80rem; line-height: 1.6; margin-bottom: 1rem; max-width: 100%; word-break: break-word; margin-left: auto; margin-right: auto; text-align: center;">
           Si deseas hacerme un obsequio, cualquier detalle que elijas con cariño será bienvenido de todo corazón. Y, si preferís hacer tu regalo de manera digital, en el botón encontrarás los datos.
         </p>
       </div>
@@ -603,23 +594,26 @@
         <button class="custom-card-btn mx-auto d-block" onclick="openRegalosModal();">VER</button>
       </div>
     </div>
-  </div>
-  <!-- Modal Regalos visual style -->
-  <div id="regalosModal" class="modal fade show" tabindex="100" style="display: none;" aria-modal="true" role="dialog">
-    <div class="modal-backdrop fade show" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); z-index: 1040;"></div>
-    <div class="modal-dialog" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1050; display: flex; flex-direction: column; align-items: center;">
-      <div class="modal-content" style="background-color: #fffaf0; border-radius: 24px; padding: 2rem 1.5rem; max-width: 300px; width: 90vw; box-shadow: 0 0 20px rgba(0,0,0,0.2); text-align: center; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        <button onclick="closeRegalosModal()" style="position: absolute; top: 12px; right: 12px; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); border: none; color: #F5E6D3; width: 32px; height: 32px; border-radius: 50%; font-weight: bold; cursor: pointer; z-index: 2; box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);">×</button>
-        <div class="d-flex flex-column align-items-center justify-content-center" style="width: 100%; text-align: center;">
-          <h2 style="font-family: 'Playfair Display', serif; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; margin-top: 0; text-align: center; width: 100%;">Transferencias</h2>
-          <p style="font-family: 'Open Sans', sans-serif; color: #9C784A; font-size: 1rem; text-align: center; width: 100%;">Alias: S.CAPLA.14</p>
-        </div>
-        <button class="btn btn-custom mt-3" id="copyCbuBtn" style="max-width: 200px; width: 100%; margin: 0 auto;">COPIAR</button>
+  </div> 
+</section>
+
+<!-- Modal Regalos visual style -->
+<div id="regalosModal" class="modal fade show" tabindex="100" style="display: none;" aria-modal="true" role="dialog">
+  <div class="modal-backdrop fade show" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); z-index: 1040;"></div>
+  <div class="modal-dialog" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1050; display: flex; flex-direction: column; align-items: center;">
+    <div class="modal-content" style="background-color: #fffaf0; border-radius: 24px; padding: 2rem 1.5rem; max-width: 300px; width: 90vw; box-shadow: 0 0 20px rgba(0,0,0,0.2); text-align: center; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+      <button onclick="closeRegalosModal()" style="position: absolute; top: 12px; right: 12px; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); border: none; color: #F5E6D3; width: 32px; height: 32px; border-radius: 50%; font-weight: bold; cursor: pointer; z-index: 2; box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);">×</button>
+      <div class="d-flex flex-column align-items-center justify-content-center" style="width: 100%; text-align: center;">
+        <h2 style="font-family: 'Playfair Display', serif; background: linear-gradient(135deg, #8B2635 0%, #A02030 50%, #C41E3A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; margin-top: 0; text-align: center; width: 100%;">Transferencias</h2>
+        <p style="font-family: 'Open Sans', sans-serif; color: #9C784A; font-size: 1rem; text-align: center; width: 100%;">Alias: S.CAPLA.14</p>
       </div>
+      <button class="btn btn-custom mt-3" id="copyCbuBtn" style="max-width: 200px; width: 100%; margin: 0 auto;">COPIAR</button>
     </div>
   </div>
- <!-- Sección Instagram estilo fondo con imagen -->
-<section id="instagram" style="background: transparent; padding: 3rem 1rem; text-align: center; color: #4A1D18; margin-top: 0; margin-bottom: 1.5rem; box-sizing: border-box;">
+</div>
+
+<!-- Sección Instagram estilo fondo con imagen -->
+<section id="instagram" style="background: transparent; padding: 3rem 1rem; text-align: center; color: #4A1D18; margin-top: 1.5rem; margin-bottom: 1.5rem; box-sizing: border-box;">
     <h2 style="font-family: 'Playfair Display', serif; color: #BA9971; font-size: 1.8rem; font-weight: 600; margin-bottom: 0.8rem;">Compartamos juntos mi día especial</h2>
     <p style="font-family: 'Playfair Display', serif; color: #BA9971; font-size: 1.2rem; margin-bottom: 1rem;">
       Compartí tus fotos y videos de este hermoso día
@@ -632,7 +626,7 @@
   </section>
   
   <!-- Sección de cierre -->
-  <section style="background: transparent; padding: 2.5rem 1rem; text-align: center; margin-top: 0; margin-bottom: 1.5rem; box-sizing: border-box;">
+  <section style="background: transparent; padding: 3rem 1rem; text-align: center; margin-top: 1.5rem; margin-bottom: 1.5rem; box-sizing: border-box;">
     <h2 style="font-family: 'Playfair Display', serif; color: #BA9971; font-size: 2.5rem; font-weight: 600; letter-spacing: 1px;">¡Te espero!</h2>
   </section>
   </div>
@@ -641,7 +635,7 @@
 <div id="sugerir" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 10000; align-items: center; justify-content: center;">
     <div style="background: #fff8f0; border-radius: 12px; width: 85vw; max-width: 400px; height: 80vh; overflow: hidden; padding: 1.5rem; position: relative; text-align: center; box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.2);">
       <button onclick="closeSugerirModal()" style="position: absolute; top: 8px; right: 8px; background-color: #d79330; border: none; border-radius: 50%; width: 36px; height: 36px; color: white; font-weight: bold; cursor: pointer; font-family: Arial, sans-serif; font-size: 1.2rem; box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);" >X</button>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScyR0h_lZF5rs4i1CdZSepTuOW3XEG94-I5_9GXbK1ezQsVNA/viewform?embedded=true" width="100%" height="100%" style="border-radius: 12px; border: none;" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScyR0h_lZF5rs4i1CdZSepTuOW3XEG94-I5_9GXbK1ezQsVNA/viewform?embedded=true&usp=pp_url" width="100%" height="100%" style="border-radius: 12px; border: none;" frameborder="0" marginheight="0" marginwidth="0" referrerpolicy="no-referrer-when-downgrade" sandbox="allow-scripts allow-same-origin allow-forms allow-popups">Cargando…</iframe>
     </div>
 </div>
 
