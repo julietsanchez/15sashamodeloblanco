@@ -6,7 +6,7 @@
  * Inicializa el contador regresivo
  */
 function initTimer() {
-  const targetDate = new Date("2026-01-15T20:00:00"); // Fecha del evento
+  const targetDate = new Date("2026-05-16T21:00:00"); // Fecha del evento
   
   /**
    * Actualiza el contador
